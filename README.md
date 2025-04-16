@@ -1,6 +1,6 @@
 # SillyTavern-Not-A-Discord-Theme 
 
-Simple extension without anything, only adds css to ST page, to simplify upgrades  (I'm thinking/working on theme manager extension)
+Simple extension without anything, only adds css to ST page, to simplify updates (I'm thinking/working on theme manager extension)
 
 You will need:
 1. https://github.com/IceFog72/SillyTavern-CustomThemeStyleInputs
