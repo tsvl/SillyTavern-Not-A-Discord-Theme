@@ -6,7 +6,7 @@ You will need:
 1. https://github.com/IceFog72/SillyTavern-CustomThemeStyleInputs
 2. https://github.com/LenAnderson/SillyTavern-CssSnippets
 3. Turn off other themes
-4. Install theme https://github.com/IceFog72/SillyTavern-Not-A-Discord-Theme
+4. Install theme extension https://github.com/IceFog72/SillyTavern-Not-A-Discord-Theme
 5. Get files as: 
   - Not a Discord Theme v1.json ST color theme
   - Big-Avatars-SillyTavern-CSS-Snippets-2025-04-16.json CssSnippet file if you want big avatars
