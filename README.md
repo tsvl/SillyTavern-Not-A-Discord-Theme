@@ -14,12 +14,13 @@ from Resources folder in Extension or https://github.com/IceFog72/SillyTavern-No
 
 What I recommended to have too:
 
-https://github.com/LenAnderson/SillyTavern-WorldInfoDrawer
-https://github.com/SillyTavern/Extension-TopInfoBar
+- https://github.com/LenAnderson/SillyTavern-WorldInfoDrawer
+- https://github.com/SillyTavern/Extension-TopInfoBar
 
-if you are using QuickReplies
-https://github.com/IceFog72/SillyTavern-SimpleQRBarToggle
-https://github.com/LenAnderson/SillyTavern-QuickRepliesDrawer
+if you are using QuickReplies:
+
+- https://github.com/IceFog72/SillyTavern-SimpleQRBarToggle
+- https://github.com/LenAnderson/SillyTavern-QuickRepliesDrawer
 
 ## Feedback
 
