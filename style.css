@@ -1430,8 +1430,11 @@ MIT License
         z-index: 60;
       }
       
+
+
       body .stcdx--tooltip {
         position: absolute;
+        background-color: var(--SmartThemeBlurTintColor) !important;
         bottom: 0;
         right: 0;
         top: calc(2em);
@@ -1443,7 +1446,7 @@ MIT License
       
       body .stcdx--root {
         right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) );
-        background-color: var(--SmartThemeChatTintColor) !important;
+        background-color: var(--SmartThemeChatTintColor);
         width: calc(var(--stcdxcodex-with) );
         z-index: 50 !important;
         left: unset !important;
@@ -1475,7 +1478,7 @@ MIT License
       }
       
       body .stcdx--codex>.stcdx--header>.stcdx--action.stcdx--menu>.stcdx--books {
-        background-color: var(--NSDSmartThemeBGColor);
+        background-color: var(--SmartThemeBlurTintColor);
       }
       
       .right_menu_button,
