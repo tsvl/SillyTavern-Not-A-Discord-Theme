@@ -59,21 +59,24 @@ MIT License
       --cfgConfig-panel-width: 0px;
       --objectiveExtensionPopout-panel-width: 0px;
       --groupMemberListPopout-panel-width: 0px;
-      --stcdxcodex: 0px;
+      --injectManagerSideBar-width: 0px;
+      --stcdxcodex-with: 0px;
       --ctsi-drawer-with: 0px;
       --notebookPanel-width: 0px;
       --gallery-panel-width: 0px;
       --trackerUI-panel-width: 0px;
+      --summaryExtensionPopout-width: 0px;
+  
       
       --elements-height: 100vh;
       --text-imput-height: 42px;
       --all-panels-width: calc(100vw - var(--nav-bar-width));
   
-      --right-panels-width: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--cfgConfig-panel-width) + var(--stcdxcodex) + var(--objectiveExtensionPopout-panel-width) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width));
+      --right-panels-width: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--cfgConfig-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--objectiveExtensionPopout-panel-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width));
       --center-panels-width: calc(var(--all-panels-width) - var(--right-panels-width) - var(--char-panel-width));
       --chat-panel-width: calc(var(--all-panels-width) - var(--right-panels-width) - var(--char-panel-width) - var(--expression-image-lorebook-width));
   /*
-      --drawer-content-panel-wit-img-width: calc(100vw - var(--nav-bar-width) - var(--cfgConfig-panel-width) - var(--objectiveExtensionPopout-panel-width) - var(--expression-image-lorebook-width) - var(--authors-note-panel-width) - var(--char-panel-width) - var(--settings-panel-width) - var(--stcdxcodex) - var(--trackerUI-panel-width) - var(--notebookPanel-width) - var(--ctsi-drawer-with) - var(--groupMemberListPopout-panel-width) - var(--gallery-panel-width));
+      --drawer-content-panel-wit-img-width: calc(100vw - var(--nav-bar-width) - var(--cfgConfig-panel-width) - var(--objectiveExtensionPopout-panel-width) - var(--expression-image-lorebook-width) - var(--authors-note-panel-width) - var(--char-panel-width) - var(--settings-panel-width) - var(--stcdxcodex-with) - var(--trackerUI-panel-width) - var(--notebookPanel-width) - var(--ctsi-drawer-with) - var(--groupMemberListPopout-panel-width) - var(--gallery-panel-width));
   */  
       }
     
@@ -145,7 +148,7 @@ MIT License
         max-height: 100dvh !important;
         z-index: 20 !important;
         left: unset;
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width) + var(--cfgConfig-panel-width) + var(--objectiveExtensionPopout-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width) + var(--cfgConfig-panel-width) + var(--objectiveExtensionPopout-panel-width));
       }
   
   
@@ -343,9 +346,13 @@ MIT License
       body:has(#right-nav-panel.closedDrawer) {
         --char-panel-width: 0px !important;
       }
+  
+      body:has(#injectManagerSideBar.visible) {
+        --injectManagerSideBar-width: 400px !important; 
+      }
     
       body:has(.stcdx--root.stcdx--codex.stcdx--active) {
-        --stcdxcodex: 400px !important;
+        --stcdxcodex-with: 400px !important;
       }
       
       body:has(#trackerInterface) {
@@ -435,10 +442,18 @@ MIT License
         --expression-image-lorebook-width: 20vw !important;
       }
       
+  
+    */
+      body:has(#logprobsViewer:is([style*="display: flex; opacity: 1;"])) {
+        --expression-image-lorebook-width: var(--NSDexpressionWidth);
+      }
       body:has(#logprobsViewer.maximized) {
         --expression-image-lorebook-width: 0px !important;
       }
-    */
+  
+      body:has(#summaryExtensionPopout) {
+        --summaryExtensionPopout-width: 400px;
+      }
   
       body:has(#ctsi-drawer.maximized) {
         --ctsi-drawer-with: 320px !important;
@@ -791,7 +806,10 @@ MIT License
         border-style: solid !important;
       }
     */
-
+  
+    #gallery,
+    #summaryExtensionPopout,
+    #injectManagerSideBar,
     #groupMemberListPopout,
     #cfgConfig.maximized,
     #vv--root.vv--maximized,
@@ -1010,9 +1028,24 @@ MIT License
       }
       
       #cfgConfig {
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) );
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--objectiveExtensionPopout-panel-width));
         width: var(--cfgConfig-panel-width);
         left: unset;
+        height: var(--elements-height);
+        z-index: 40 !important;
+        border-radius: 0px !important;
+        border: unset;
+        max-height: unset;
+        min-width: unset;
+        top: 0 !important;
+      }
+  
+      #summaryExtensionPopout {
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width)  + var(--notebookPanel-width) + var(--objectiveExtensionPopout-panel-width));
+        width: var(--summaryExtensionPopout-width);
+        left: unset;
+        border-radius: 0px !important;
+        border: unset;
         height: var(--elements-height);
         z-index: 40 !important;
         max-height: unset;
@@ -1021,7 +1054,7 @@ MIT License
       }
     
       #objectiveExtensionPopout {
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width));
         width: var(--objectiveExtensionPopout-panel-width);
         height: var(--elements-height);
         margin: 0 0 0 0 !important;
@@ -1032,7 +1065,23 @@ MIT License
         min-width: unset;
         top: 0 !important;
       }
-    
+  
+      #injectManagerSideBar {
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--gallery-panel-width) + var(--groupMemberListPopout-panel-width));
+        left: unset !important;
+        width: var(--injectManagerSideBar-width);
+        height: var(--elements-height);
+        margin: 0 0 0 0 !important;
+        z-index: 45 !important;
+        border-radius: 0px !important;
+        border: unset;
+        max-height: unset;
+        min-width: unset;
+        top: 0 !important;
+      }
+  
+  
+  
       #CharListButtonAndHotSwaps {
         padding: 8px 8px 0px 8px;
         border-bottom: 1px solid var(--SmartThemeBorderColor) !important;
@@ -1119,22 +1168,25 @@ MIT License
       }
       
       #gallery {
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with));
         left: unset;
         display: flex;
         position: fixed;
-        bottom: unset !important;
+        bottom: 0 !important;
+        top: 0 !important;
         gap: 5px;
         border-radius: 8px;
-        border: unset !important;
+        border: unset;
         margin: 0 !important;
         width: calc(var(--gallery-panel-width) );
         z-index: 40 !important;
         max-height: unset;
+        border: unset;
+        border-radius: 0px !important;
       }
       
       #groupMemberListPopout {
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--gallery-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--gallery-panel-width));
         left: unset;
         display: flex;
         position: fixed;
@@ -1157,9 +1209,10 @@ MIT License
         z-index: 9999 !important;
       }
       
-      .draggable {
+      .draggable {  
         border-radius: 8px;
         z-index: 9999;
+        background-color: var(--SmartThemeChatTintColor) !important;
       }
       
       
@@ -1178,13 +1231,13 @@ MIT License
         max-height: unset;
       }
   
-  
-  
-  
-  
       #logprobsViewer:not(.maximized) {
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) );
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--cfgConfig-panel-width));
         z-index: 30 !important;
+        border-radius: 0px;
+        border: unset;
+        bottom: 0 !important;
+        max-height: 100dvh;
         width: calc(var(--expression-image-lorebook-width) );
       }
       
@@ -1192,7 +1245,7 @@ MIT License
         z-index: 40 !important;
         right: calc(var(--settings-panel-width));
         width: calc(var(--authors-note-panel-width) );
-        border-radius: 8px;
+        border-radius: 0px;
         height: var(--elements-height);
         max-height: unset;
       }
@@ -1206,12 +1259,14 @@ MIT License
       #notebookPanel.maximized {
         margin: 0 !important;
         right: 0;
-        border: unset;
+        border: 1px solid var(--SmartThemeBorderColor) !important;
         z-index: 90 !important;
         width: var(--chat-panel-width) !important;
         left: calc(var(--nav-bar-width) + var(--char-panel-width) );
         min-height: 100px !important;
         max-height: 90dvh !important;
+        border-radius: 0px;
+        bottom: 0 !important;
         height: calc(100svh ) !important;
         bottom: unset;
       }
@@ -1237,12 +1292,13 @@ MIT License
       #qr--settings #qr--set-qrList .qr--set-qrListContents>.qr--set-item> :nth-child(5) {
         flex: inherit;
       }
-    
+  
       #floatingPrompt,
       #cfgConfig {
         padding: 0px 0px 0px 8px;
         padding-top: 30px;
-        border-radius: 8px;
+        border-radius: 0px;
+        border: unset;
       }
       
       .checkbox_label {
@@ -1299,7 +1355,7 @@ MIT License
       
       body #notebookPanel {
         right: calc(var(--settings-panel-width) + var(--authors-note-panel-width)) !important;
-        background-color: var(--SmartThemeBlurTintColor) !important;
+        background-color: var(--SmartThemeChatTintColor) !important;
         width: calc(var(--notebookPanel-width) ) !important;
         z-index: 50 !important;
         left: unset;
@@ -1387,7 +1443,7 @@ MIT License
       body .stcdx--root {
         right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) );
         background-color: var(--SmartThemeBlurTintColor) !important;
-        width: calc(var(--stcdxcodex) );
+        width: calc(var(--stcdxcodex-with) );
         z-index: 50 !important;
         left: unset !important;
         border-radius: 0px;
@@ -1488,7 +1544,7 @@ MIT License
   
       #expression-wrapper {
         z-index: 20 !important;
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--objectiveExtensionPopout-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--groupMemberListPopout-panel-width) + var(--gallery-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--objectiveExtensionPopout-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--groupMemberListPopout-panel-width) + var(--gallery-panel-width));
         left: unset;
         width: var(--expression-image-lorebook-width) !important;
         height: 100vh !important;
@@ -1512,7 +1568,7 @@ MIT License
         border-radius: 8px !important;
         background-color: transparent !important;
         left: unset !important;
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--objectiveExtensionPopout-panel-width) + var(--stcdxcodex) + var(--trackerUI-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--groupMemberListPopout-panel-width) + var(--gallery-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--objectiveExtensionPopout-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--groupMemberListPopout-panel-width) + var(--gallery-panel-width));
         z-index: 30 !important;
       }
   
