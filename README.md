@@ -10,6 +10,7 @@ You will need:
 5. Get files as: 
   - Not a Discord Theme v1.json ST color theme
   - Big-Avatars-SillyTavern-CSS-Snippets-2025-04-16.json CssSnippet file if you want big avatars
+
 from Resources folder in Extension or https://github.com/IceFog72/SillyTavern-Not-A-Discord-Theme/tree/main/Resources and apply them
 
 What I recommended to have too:
