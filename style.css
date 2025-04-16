@@ -1154,7 +1154,7 @@ MIT License
       }
   
       .drawer-content {
-        background-color: var(--SmartThemeChatTintColor) !important;
+        background-color: var(--SmartThemeBlurTintColor) !important;
         width: var(--chat-panel-width);
         left: calc(var(--nav-bar-width) + var(--char-panel-width));
         border: unset;
@@ -1186,7 +1186,7 @@ MIT License
       }
       
       #groupMemberListPopout {
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--gallery-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--gallery-panel-width) + var(--ctsi-drawer-with));
         left: unset;
         display: flex;
         position: fixed;
