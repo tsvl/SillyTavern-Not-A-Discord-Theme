@@ -1030,6 +1030,7 @@ MIT License
       #cfgConfig {
         right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--objectiveExtensionPopout-panel-width));
         width: var(--cfgConfig-panel-width);
+        background-color: var(--SmartThemeChatTintColor) !important;
         left: unset;
         height: var(--elements-height);
         z-index: 40 !important;
@@ -1226,6 +1227,7 @@ MIT License
   
       #left-nav-panel.drawer-content {
         right: 0;
+        background-color: var(--SmartThemeChatTintColor) !important;
         padding: 0;
         width: calc(var(--settings-panel-width) );
         height: var(--elements-height);
@@ -1245,6 +1247,7 @@ MIT License
       #floatingPrompt:not(.maximized) {
         z-index: 40 !important;
         right: calc(var(--settings-panel-width) + var(--ctsi-drawer-with));
+        background-color: var(--SmartThemeChatTintColor) !important;
         width: calc(var(--authors-note-panel-width) );
         border-radius: 0px;
         height: var(--elements-height);
@@ -1277,17 +1280,16 @@ MIT License
       #send_form.compact {
         background-color: #222327 !important;
         border-radius: 8px !important;
-        border: unset;
+        border: 1px solid color-mix(in srgb, var(--SmartThemeBorderColor) 50%, transparent) !important;
       }
       
       #send_form {
-        border: unset;
-        border-radius: unset;
+
+        outline: unset !important;
       }
   
       #send_form:has(#send_textarea:focus-visible) {
-        border-color: var(--interactable-outline-color-faint);
-        outline: 1px solid var(--interactable-outline-color-faint);
+        border: 1px solid var(--SmartThemeBorderColor) !important;
       }
   
       #qr--settings #qr--set-qrList .qr--set-qrListContents>.qr--set-item> :nth-child(5) {
@@ -1446,7 +1448,7 @@ MIT License
       
       body .stcdx--root {
         right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) );
-        background-color: var(--SmartThemeChatTintColor);
+        background-color: var(--SmartThemeChatTintColor) !important;;
         width: calc(var(--stcdxcodex-with) );
         z-index: 50 !important;
         left: unset !important;
@@ -1569,10 +1571,10 @@ MIT License
         align-items: end !important;
         padding: 0 !important;
         border: 0 !important;
-        border-radius: 8px !important;
+        border-radius: 0px !important;
         background-color: transparent !important;
         left: unset !important;
-        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--objectiveExtensionPopout-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--groupMemberListPopout-panel-width) + var(--gallery-panel-width));
+        right: calc(var(--settings-panel-width) + var(--authors-note-panel-width) + var(--objectiveExtensionPopout-panel-width) + var(--stcdxcodex-with) + var(--injectManagerSideBar-width) + var(--trackerUI-panel-width) + var(--summaryExtensionPopout-width) + var(--notebookPanel-width) + var(--ctsi-drawer-with) + var(--groupMemberListPopout-panel-width) + var(--gallery-panel-width) + var(--cfgConfig-panel-width));
         z-index: 30 !important;
       }
   
@@ -1580,7 +1582,7 @@ MIT License
         margin: 0 !important;
         padding: 0 !important;
         border: 0 !important;
-        border-radius: 8px !important;
+        border-radius: 0px !important;
         background-color: transparent !important;
         right: unset !important;
         left: calc(var(--nav-bar-width) + var(--char-panel-width) +  calc(var(--chat-panel-width) / 2) ) !important;
@@ -1597,7 +1599,7 @@ MIT License
       }
       
       .zoomed_avatar img {
-        border-radius: 8px !important;
+        border-radius: 0px !important;
         width: 100% !important;
         height: 100% !important;
         object-fit: unset !important;
