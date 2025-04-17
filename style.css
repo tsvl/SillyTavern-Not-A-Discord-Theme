@@ -1275,7 +1275,6 @@ MIT License
         bottom: unset;
       }
       
-      body #top-bar,
       body #send_form,
       #send_form.compact {
         background-color: #222327 !important;
