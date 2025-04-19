@@ -685,7 +685,7 @@ body.bubblechat .mes[is_user="false"] {
 }
 
 #customCSS {
-    border-radius: 0px 0px 8px 8px !important;
+    border-radius: 0px 0px 0px 0px !important;
 }
 
 .inline-drawer-header:has(.up) {
@@ -699,7 +699,7 @@ body.bubblechat .mes[is_user="false"] {
 .inline-drawer-content {
     padding: 8px;
     background: var(--black50a);
-    border-radius: 0px 0px 8px 8px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 
@@ -853,7 +853,7 @@ select,
 .text_pole,
 .textarea_compact,
 .neo-range-input {
-    border-radius: 8px !important;
+    border-radius: 0px !important;
 }
 
 
