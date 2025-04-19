@@ -589,7 +589,7 @@ body:has(#gallery.draggable) {
     border: 1px solid #97979f15;
     --shadow-medium: 0 4px 8px 0 hsl(none 0% 0%/0.16);
     box-shadow: var(--shadow-medium) !important;
-    background-color: #2c2d32;
+    background-color: var(--NSDsmartThemeHiglitesColor) !important;
     padding: 2px;
 
     border-radius: 8px;
