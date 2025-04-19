@@ -978,7 +978,7 @@ select,
     height: 100vh !important;
     margin: 0 0 0 0 !important;
     border-radius: 0px !important;
-    left: calc(var(--nav-bar-width) + var(--char-panel-width)) !important;
+    left: calc(var(--nav-bar-width) + var(--char-panel-width) + var(--right-panels-width)) !important;
 }
 
 #bg1 {
@@ -993,8 +993,7 @@ select,
     /*width: calc(var(--drawer-content-panel-wit-img-width) );*/
     /*border-radius: 8px !important;*/
     margin: 0 0 0 0 !important;
-    left: calc(var(--nav-bar-width) + var(--char-panel-width)) !important;
-    right: var(--right-panels-width) !important;
+    left: calc(var(--nav-bar-width) + var(--char-panel-width) + var(--right-panels-width)) !important;
     width: var(--center-panels-width) !important;
 }
 
@@ -1237,11 +1236,11 @@ body.waifuMode:has(#extensionTopBar) #chat {
 #floatingPrompt:not(.maximized),
 #left-nav-panel.drawer-content {
     margin: 0 !important;
-    left: unset;
+    /* left: unset; */
 }
 
 #left-nav-panel.drawer-content {
-    right: 0;
+    /* right: 0; */
     background-color: var(--SmartThemeChatTintColor) !important;
     padding: 0;
     width: calc(var(--settings-panel-width));
